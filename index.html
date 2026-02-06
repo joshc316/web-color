@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RGB Color Picker</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">🎨 RGB Color Picker</a>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<main class="container my-5 flex-grow-1">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <!-- CARD PRINCIPAL -->
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-4">
+
+                    <h3 class="text-center mb-4">Selector de Color</h3>
+
+                    <!-- CARD COLOR -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <input type="color" id="colorPicker" value="#000000" class="mb-3">
+                            <div id="colorBox" class="color-box mx-auto"></div>
+                        </div>
+                    </div>
+
+                    <!-- CARD CONTROLES -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+
+                            <!-- ROJO -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Rojo</label>
+                                <div class="d-flex gap-2">
+                                    <input type="range" class="form-range" min="0" max="255" value="0" id="red">
+                                    <input type="number" class="form-control" min="0" max="255" value="0" id="redInput">
+                                </div>
+                            </div>
+
+                            <!-- VERDE -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Verde</label>
+                                <div class="d-flex gap-2">
+                                    <input type="range" class="form-range" min="0" max="255" value="0" id="green">
+                                    <input type="number" class="form-control" min="0" max="255" value="0" id="greenInput">
+                                </div>
+                            </div>
+
+                            <!-- AZUL -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Azul</label>
+                                <div class="d-flex gap-2">
+                                    <input type="range" class="form-range" min="0" max="255" value="0" id="blue">
+                                    <input type="number" class="form-control" min="0" max="255" value="0" id="blueInput">
+                                </div>
+                            </div>
+
+                            <!-- RESULTADOS -->
+                            <div class="row text-center mt-4">
+                                <div class="col-md-6">
+                                    <div class="card shadow-sm border-0">
+                                        <div class="card-body">
+                                            <small class="text-muted">RGB</small>
+                                            <h6 id="rgbText">rgb(0, 0, 0)</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card shadow-sm border-0">
+                                        <div class="card-body">
+                                            <small class="text-muted">HEX</small>
+                                            <h6 id="hexText">#000000</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light text-center py-3 mt-auto">
+    <div class="container">
+        <small>
+            Desarrollado por <strong>Meneses Cadena Jose Refugio</strong> · Frontend Developer  
+            <br>
+            © 2026 · RGB Color Picker
+        </small>
+    </div>
+</footer>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
